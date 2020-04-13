@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+	
+	<http:request-config name="HTTP_Request_Configuration" protocol="HTTPS" host="anypoint.mulesoft.com" port="443" doc:name="HTTP Request Configuration" />
+	<http:request-config name="ApiManagerApps" protocol="HTTPS" host="anypoint.mulesoft.com" port="443" doc:name="HTTP Request Configuration" basePath="#[flowVars.apiManagerAppsPath]" />
+	<http:request-config name="PolicyDetails" protocol="HTTPS" host="anypoint.mulesoft.com" port="443" basePath="#[flowVars.policyDetailsUrl]" doc:name="HTTP Request Configuration"/>
+	<!-- <file:connector name="File"   autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/> -->
+	<asynchronous-processing-strategy name="Asynchronous_Processing_Strategy" poolExhaustedAction="WAIT" doc:name="Asynchronous Processing Strategy"/>
+    <http:request-config name="HTTP_Request_SVN" protocol="HTTPS" host="svn.int.support.awsplatform.co.uk" port="443" doc:name="HTTP Request Configuration" basePath="#[flowVars.svnPath]"/>
+    <http:request-config name="HTTP_Request_SvnApiInstance" protocol="HTTPS" host="svn.int.support.awsplatform.co.uk" port="443" basePath="#[flowVars.SVNPropFilePath]" doc:name="HTTP Request Configuration"/>
+	<flow name="RuntimeManagerFlow">
+		<http:listener config-ref="Domain_HTTP_Listener_Configuration" path="/runtimeManagerAppDetails" doc:name="HTTP"/>
+        <logger message="RuntimeManager flow started" level="INFO" doc:name="Logger"/>
+        <json:json-to-object-transformer doc:name="JSON to Object" returnClass="java.util.HashMap"/>
+            <flow-ref name="envDetailsSub_Flow" doc:name="envDetailsSubflow"/>
+		<http:request config-ref="HTTP_Request_Configuration" path="/armui/api/v1/applications" method="GET" doc:name="RuntimeApplicationDetails">
+			<http:request-builder>
+				<http:header headerName="Content-Type" value="application/json"/>
+				<http:header headerName="X-ANYPNT-ENV-ID" value="#[flowVars.envid]"/>
+				<http:header headerName="X-ANYPNT-ORG-ID" value="#[flowVars.organizationId]"/>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="sample_data\json_2.json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/csv header=true
+---
+ payload.data map ((data, indexofdata) -> {
+	
+	"APIName": data.artifact.name,
+	"ArtefactID": data.artifact.fileName,
+	"Status": data.lastReportedStatus,
+	"UpTime": (data.uptime/1000/60/60/24) as :string {format: ".##days"}
+		
+	})
+	
+]]></dw:set-payload>
+		</dw:transform-message>
+		<!-- <file:outbound-endpoint path="${FilePath}" outputPattern="RuntimeManagerApplicationDetails.csv" connector-ref="File" responseTimeout="10000" doc:name="File"/> -->
+
+		<logger level="INFO" doc:name="Logger"/>
+	</flow>
+	<flow name="APIManagerFlow">
+		<http:listener config-ref="Domain_HTTP_Listener_Configuration" path="/apiManagerPolicyDetails" doc:name="HTTP"/>
+        <logger message="ApiManager flow started" level="INFO" doc:name="Logger"/>
+        <json:json-to-object-transformer returnClass="java.util.HashMap" doc:name="JSON to Object"/>
+        <flow-ref name="ApiManagerDetails_Flow" doc:name="ApiManagerDetailsSubFlow"/>
+		<http:request config-ref="HTTP_Request_Configuration" path="/apimanager/api/v1/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/policy-templates" method="GET" doc:name="policyTemplates">
+			<http:request-builder>
+				<http:header headerName="Content-Type" value="application/json"/>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-variable variableName="policyDetails"><![CDATA[%dw 1.0
+%output application/json
+---
+payload map ((value, indexOfValue)-> {
+	
+	policyName: value.name,
+	policyId: value.id,
+	category: value.category when value.category != null otherwise "",
+	gatewayCompatibility: value.gatewayCompatibility,
+	supportedPoliciesVersions: value.supportedPoliciesVersions
+	
+})
+]]></dw:set-variable>
+			<dw:set-variable variableName="combinedData"><![CDATA[%dw 1.0
+%output application/java
+---
+[]]]></dw:set-variable>
+		</dw:transform-message>
+		<foreach collection="#[flowVars.apiManagerApps.apiList]" doc:name="For Each">
+			<logger message="In foreach=====#[payload]" level="INFO" doc:name="Logger"/>
+			<message-properties-transformer scope="invocation" doc:name="Message Properties">
+				<add-message-property key="apiName" value="#[payload.apiName]"/>
+				<add-message-property key="apiId" value="#[payload.apiId]"/>
+			</message-properties-transformer>
+			<dw:transform-message doc:name="Transform Message">
+				<dw:set-variable variableName="policyDetailsUrl"><![CDATA[%dw 1.0
+%output application/java
+---
+"/apimanager/api/v1/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments/" ++ flowVars.envid ++ "/apis/" ++ flowVars.apiId]]></dw:set-variable>
+			</dw:transform-message>
+			<http:request config-ref="PolicyDetails" path="/policies" method="GET" doc:name="PolicyDetails">
+				<http:request-builder>
+					<http:query-param paramName="fullInfo" value="false"/>
+					<http:header headerName="Content-Type" value="application/json"/>
+					<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+				</http:request-builder>
+			</http:request>
+			<dw:transform-message doc:name="Transform Message">
+				<dw:input-payload doc:sample="sample_data\json.json" mimeType="application/json"/>
+				<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload map ((value, indexOfValue)-> {
+	(apiName: flowVars.apiName) when flowVars.apiId == value.apiId,
+	apiId: value.apiId,
+	policyName: flatten (flowVars.policyDetails map ((policyDetails, indexOfpolicyDetails)-> {
+		(policyName: policyDetails.policyName) when policyDetails.policyId as :string == value.policyTemplateId
+		
+	} filter policyDetails!={})) reduce $$,
+	policyId: value.id,
+	policyTemplateId: value.policyTemplateId,
+	policyStatus: "Disabled" when value.disabled == true otherwise "enabled",
+	policyCreatedDate: value.audit.created.date,
+	policyUpdatedDate: value.audit.updated.date
+	
+})]]></dw:set-payload>
+			</dw:transform-message>
+			<expression-component doc:name="Expression"><![CDATA[flowVars.combinedData.add(payload)]]></expression-component>
+			<logger level="INFO" doc:name="Logger" message="At the end of foreach #[payload]"/>
+		</foreach>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+flatten flowVars.combinedData]]></dw:set-payload>
+		</dw:transform-message>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="sample_data\json_2.json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/csv header=true
+---
+payload map ((data, indexofdata) -> {
+	ApiManagerAppName:data.apiName,
+	PolicyName:data.policyName,
+	PolicyStatus:data.policyStatus,
+	PolicyCreatedDate:data.policyCreatedDate,
+	PolicyUpdatedDate: data.policyUpdatedDate
+})
+]]></dw:set-payload>
+		</dw:transform-message>
+		<!-- <
+    <flow name="anypointplatform_apiFlow"/>file:outbound-endpoint path="${FilePath}" outputPattern="policyDetails.csv" connector-ref="File" responseTimeout="10000" doc:name="File"/> -->
+		<logger level="INFO" doc:name="Logger"/>
+	</flow>
+    <flow name="APIManagerAppDetails">
+    
+		<http:listener config-ref="Domain_HTTP_Listener_Configuration" path="/APIManagerAppsDetails" doc:name="HTTP"/>
+        <logger message="APIManagerApplicationDetails flow started" level="INFO" doc:name="Logger"/>
+		<json:json-to-object-transformer returnClass="java.util.HashMap" doc:name="JSON to Object"/>
+        <flow-ref name="ApiManagerDetails_Flow" doc:name="ApiManagerDetailsSubFlow"/>
+		
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/csv header=true
+%var inputDetails = {
+"envName": flowVars.envName,
+"svnUsername": flowVars.svnUsername,
+"svnPassword": flowVars.svnPassword,
+"svnBranch": flowVars.svnBranch,
+"username": flowVars.username,
+"password": flowVars.password
+}
+ 
+---
+flowVars.apiManagerApps.apiList map ((value, indexOfValue)-> {
+	APIMangerAPIName:value.apiName,
+	RuntimeManagerAPIName: lookup ("apiVersionDetailsFlow", inputDetails ++ {"version": value.autodiscoveryInstanceName}),
+	//Status: "Active" when value.lastActiveDate as :datetime {format: "yyyy-MM-dd'T'HH:mm:ss.SSSX"} as :string {format: "yyyy-MM-dd'T'HH:mm"} == now as :localdatetime {format: "yyyy-MM-dd'T'HH:mm:ss.SSS+0000"} as :datetime as :string {format: "yyyy-MM-dd'T'HH:mm"} otherwise "InActive",
+	AutodiscoveryInstanceName:value.autodiscoveryInstanceName,
+	AutodiscoveryApiName:value.autodiscoveryApiName,
+	ProductVersion:value.productVersion,
+	LastActiveDate:value.lastActiveDate,
+	CreatedDate:value.createdDate,
+	UpdatedDate:value.updatedDate
+})]]></dw:set-payload>
+        </dw:transform-message>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="apiVersionDetailsFlow">
+
+        <logger message="started apiVersionDetails flow" level="INFO" doc:name="Logger"/>
+
+        <set-variable variableName="version" value="#[payload.version]" doc:name="ApiInstanceVersion"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/armui/api/v1/applications" method="GET" doc:name="RuntimeApplicationDetails">
+			<http:request-builder>
+				<http:header headerName="Content-Type" value="application/json"/>
+				<http:header headerName="X-ANYPNT-ENV-ID" value="#[flowVars.envid]"/>
+				<http:header headerName="X-ANYPNT-ORG-ID" value="#[flowVars.organizationId]"/>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+			</http:request-builder>
+		</http:request>
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%var inputDetails = {
+"envName": flowVars.envName,
+"svnUsername": flowVars.svnUsername,
+"svnPassword": flowVars.svnPassword,
+"svnBranch": flowVars.svnBranch,
+"username": flowVars.username,
+"password": flowVars.password
+}
+
+---
+ payload.data map ((data, indexofdata) -> {
+	
+	"APIName": data.artifact.name,
+	"ApiVersion": lookup ("svn_apiFlow", inputDetails ++ {"apiName": data.artifact.name}) as :array
+	
+	})
+	
+]]></dw:set-payload>
+        </dw:transform-message>
+        <dw:transform-message doc:name="Transform Message">
+            <dw:input-payload doc:sample="sample_data\json_2.json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+
+---
+ flatten (payload map ((data, indexofdata) -> {
+	("runtimeManagerAPIName": data.APIName) when data.ApiVersion contains flowVars.version
+	} filter data !={})) reduce $$
+	
+]]></dw:set-payload>
+        </dw:transform-message>
+		<logger level="INFO" doc:name="Logger"/>
+    </flow>
+    <flow name="svn_apiFlow">
+        <logger message="invoking svn" level="INFO" doc:name="Logger"/>
+        <set-variable variableName="apiName" value="#[payload.apiName]" doc:name="apiName"/>
+
+
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+flowVars.svnUsername ++ ":" ++ flowVars.svnPassword]]></dw:set-payload>
+        </dw:transform-message>
+        <base64-encoder-transformer xmlns="http://www.mulesoft.org/schema/mule/core" encoding="utf-8"></base64-encoder-transformer>
+
+        <dw:transform-message doc:name="Transform Message">
+            <dw:input-payload doc:sample="sample_data\empty.xml"/>
+
+            <dw:set-variable variableName="SVNPropFilePath"><![CDATA[%dw 1.0
+%output application/java
+---
+"/svn/b4c_esb/branches/" ++ flowVars.svnBranch ++ "/config/properties/" ++ flowVars.envName ++ "/" ++ flowVars.apiName ++ "_" ++ lower (flowVars.envName) ++ ".properties"]]></dw:set-variable>
+            <dw:set-variable variableName="Auth"><![CDATA[%dw 1.0
+%output application/java
+---
+"basic " ++ payload]]></dw:set-variable>
+
+        </dw:transform-message>
+        <http:request config-ref="HTTP_Request_SvnApiInstance" path="/" method="GET" doc:name="HTTP" target="#[flowVars.httpResp]">
+            <http:request-builder>
+                <http:header headerName="Authorization" value="#[flowVars.Auth]"/>
+
+            </http:request-builder>
+        </http:request>
+        <set-payload value="#[flowVars.httpResp]" doc:name="Set Payload"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="0f45c4aa-8aca-4c97-970b-5cea0b563459">
+            <dw:input-payload doc:sample="sample_data\empty_1.xml"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+flatten ((payload splitBy ("\n")) map ((value, indexOfValue)-> {
+	Details:value splitBy ("=")}) map ((props,ValueOfProps)-> {
+	key:props.Details[0],
+	value:props.Details[1] }) map ((version, ValueOfVersion)-> {
+	(version: version.value replace "\r" with "") when version.key contains (".apiversion") 	
+} filter version != {})) ]]></dw:set-payload>
+
+        </dw:transform-message>
+        <logger level="INFO" doc:name="Logger" message="flow complete"/>
+        <choice-exception-strategy doc:name="Choice Exception Strategy">
+            <catch-exception-strategy when="#[exception.causedBy(org.mule.module.http.internal.request.ResponseValidatorException)]" doc:name="Catch Exception Strategy">
+                <logger level="INFO" doc:name="Logger" message="in catch exception strategy ==== response code validator exception"/>
+                <dw:transform-message doc:name="Transform Message">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+[]]]></dw:set-payload>
+                </dw:transform-message>
+            </catch-exception-strategy>
+            <catch-exception-strategy when="#[exception.causedBy(*)]" doc:name="Catch Exception Strategy">
+                <logger message="default exception catch block" level="INFO" doc:name="Logger"/>
+                <set-payload value="Default" doc:name="Set Payload"/>
+            </catch-exception-strategy>
+        </choice-exception-strategy>
+    </flow>
+    <sub-flow name="ApiManagerDetails_Flow">
+        <logger message="ApiManagerDetailsFlow" level="INFO" doc:name="Logger"/>
+    <flow-ref name="envDetailsSub_Flow" doc:name="envDetailsSubFlow"/>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-variable variableName="apiManagerAppsPath"><![CDATA[%dw 1.0
+%output application/java
+---
+"/apimanager/api/v1/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments/" ++ flowVars.envid]]></dw:set-variable>
+		</dw:transform-message>
+		<http:request config-ref="ApiManagerApps" path="/apis" method="GET" doc:name="ApiMangerApplicationDetails">
+			<http:request-builder>
+				<http:header headerName="Content-Type" value="application/json"/>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="ApiManagerApplicationDetails.json" mimeType="application/json"/>
+			<dw:set-variable variableName="apiManagerApps"><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	"apiList": (payload.assets map ((asset, indexOfAsset)-> {
+	(asset.apis map ((apis, indexOfApis)-> {
+			
+			"apiName": apis.assetId,
+			"apiId": apis.id,
+			"autodiscoveryInstanceName": apis.autodiscoveryInstanceName,
+			"lastActiveDate": apis.lastActiveDate,
+			"assetVersion":apis.assetVersion,
+			"productVersion":apis.productVersion,
+			"createdDate": apis.audit.created.date,
+			"updatedDate":apis.audit.updated.date
+		})),
+		"autodiscoveryApiName": asset.autodiscoveryApiName
+	}))
+}]]></dw:set-variable>
+		</dw:transform-message>
+		<!-- <async processingStrategy="Asynchronous_Processing_Strategy" doc:name="Async">
+			<dw:transform-message doc:name="Transform Message">
+				<dw:set-payload><![CDATA[%dw 1.0
+%output application/csv header=true
+ 
+
+flowVars.apiManagerApps.apiList map ((value, indexOfValue)-> {
+	APIName:value.apiName,
+	AutodiscoveryInstanceName:value.autodiscoveryInstanceName,
+	AutodiscoveryApiName:value.autodiscoveryApiName,
+	ProductVersion:value.productVersion,
+	LastActiveDate:value.lastActiveDate,
+	CreatedDate:value.createdDate,
+	UpdatedDate:value.updatedDate
+})]]></dw:set-payload>
+			</dw:transform-message>
+			<file:outbound-endpoint path="${FilePath}" outputPattern="APIManagerApplicationDetails.csv" connector-ref="File" responseTimeout="10000" doc:name="File"/>
+		</async> -->
+    </sub-flow>
+    <sub-flow name="envDetailsSub_Flow">
+        <logger message="envDetails subflow Started" level="INFO" doc:name="Logger"/>
+    <message-properties-transformer scope="invocation" doc:name="Message Properties">
+            <add-message-property key="envName" value="#[payload.envName]"/>
+            <add-message-property key="svnUsername" value="#[payload.svnUsername]"/>
+            <add-message-property key="svnPassword" value="#[payload.svnPassword]"/>
+            <add-message-property key="svnBranch" value="#[payload.svnBranch]"/>
+            <add-message-property key="username" value="#[payload.username]"/>
+            <add-message-property key="password" value="#[payload.password]"/>
+        </message-properties-transformer>
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	username: flowVars.username,
+	password: flowVars.password
+}]]></dw:set-payload>
+        </dw:transform-message>
+		<http:request config-ref="HTTP_Request_Configuration" path="/accounts/login" method="POST" doc:name="accesstoken"/>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-variable variableName="access_token"><![CDATA[%dw 1.0
+%output application/java
+%var accesstoken= payload.access_token
+---
+"Bearer " ++ accesstoken]]></dw:set-variable>
+		</dw:transform-message>
+		<http:request config-ref="HTTP_Request_Configuration" path="/accounts/api/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments" method="GET" doc:name="ENV details">
+			<http:request-builder>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+				<http:header headerName="Content-Type" value="application/json"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="sample_data\json_3.json"/>
+            <dw:set-variable variableName="envid"><![CDATA[%dw 1.0
+%output application/java
+%var envid= flatten (payload.data map ((data, indexofdata) -> {
+	
+	(id: data.id) when data.name == flowVars.envName
+		
+	} filter data!={})) reduce $$
+	
+---
+envid.id
+	]]></dw:set-variable>
+			<dw:set-variable variableName="organizationId"><![CDATA[%dw 1.0
+%output application/java
+%var orgid=flatten (payload.data map ((data, indexofdata) -> {
+	
+	(orgid: data.organizationId) when data.name == flowVars.envName
+		
+	} filter data!={})) reduce $$
+---
+orgid.orgid
+	]]></dw:set-variable>
+		</dw:transform-message>
+		<logger level="INFO" doc:name="Logger"/>
+    </sub-flow>
+</mule>
