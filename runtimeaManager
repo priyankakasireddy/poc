@@ -1,0 +1,2942 @@
+{
+  "data": [
+    {
+      "id": 4417620,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_claims_policysearch_api",
+        "fileName": "exp_claims_policysearch_api-1.0.1-3778.zip",
+        "fileChecksum": "1f401eecf61521705d8e6067be58e3c79be51c31",
+        "lastUpdateTime": 1583771855804,
+        "createTime": 1578502414212
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338758460
+    },
+    {
+      "id": 4417629,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_confused_policy_motorquote_api",
+        "fileName": "exp_confused_policy_motorquote_api-1.0.1-3686.zip",
+        "fileChecksum": "22142862e360b832b6e5e57beb886f3f1cf0ca5b",
+        "lastUpdateTime": 1580469078952,
+        "createTime": 1578502579752
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338779314
+    },
+    {
+      "id": 4417665,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_policy_getMotorQuotePrice_api",
+        "fileName": "prc_policy_getMotorQuotePrice_api-1.0.1-3829.zip",
+        "fileChecksum": "febbc513ac3ff930962d8d747d53b60c7ebbff25",
+        "lastUpdateTime": 1586178025722,
+        "createTime": 1578503818234
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338767395
+    },
+    {
+      "id": 4417667,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_ctm_policy_motorquote_api",
+        "fileName": "exp_ctm_policy_motorquote_api-1.0.1-3683.zip",
+        "fileChecksum": "44964787e9c7f8d886efbf351d3bf856d90ae1bf",
+        "lastUpdateTime": 1580468999509,
+        "createTime": 1578503886628
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338691806
+    },
+    {
+      "id": 4417668,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_account_policy_details_api",
+        "fileName": "exp_digital_account_policy_details_api-1.0.1-3826.zip",
+        "fileChecksum": "af236fc11c489452794d2152eca797a98e1157c3",
+        "lastUpdateTime": 1585570888986,
+        "createTime": 1578503897462
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338682816
+    },
+    {
+      "id": 4417669,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_addresslookup_api",
+        "fileName": "exp_digital_addresslookup_api-1.0.1-3624.zip",
+        "fileChecksum": "62b3892e88ed6efa4660282dcadbb32a4669d3fe",
+        "lastUpdateTime": 1580466077108,
+        "createTime": 1578503906025
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338804730
+    },
+    {
+      "id": 4417671,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policy_documents_api",
+        "fileName": "exp_digital_policy_documents_api-1.0.1-3789.zip",
+        "fileChecksum": "6847c9c90c8048e0275856f416b0d820472aa958",
+        "lastUpdateTime": 1584086577644,
+        "createTime": 1578503923764
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338760056
+    },
+    {
+      "id": 4417673,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policy_renewals_api",
+        "fileName": "exp_digital_policy_renewals_api-1.0.0-3721.zip",
+        "fileChecksum": "a2f2b0c413588688ca5cfcf8ae60074443aae83c",
+        "lastUpdateTime": 1580912127602,
+        "createTime": 1578503932353
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338644193
+    },
+    {
+      "id": 4417674,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policy_retrievequote_proxy_api",
+        "fileName": "exp_digital_policy_retrievequote_proxy_api-1.0.0-3680.zip",
+        "fileChecksum": "f21acdcd42eb507fb0dcdfe8e9c05bec48f968ff",
+        "lastUpdateTime": 1580468259916,
+        "createTime": 1578503944822
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338811943
+    },
+    {
+      "id": 4417679,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policy_retrievequote_unauth_proxy_api",
+        "fileName": "exp_digital_policy_retrievequote_unauth_proxy_api-1.0.1-3681.zip",
+        "fileChecksum": "28b869a6b7b6aca0c5c268d392cde56cc47f1d97",
+        "lastUpdateTime": 1580468295666,
+        "createTime": 1578503956087
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338704395
+    },
+    {
+      "id": 4417681,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policy_submission_api",
+        "fileName": "exp_digital_policy_submission_api-1.0.1-3823.zip",
+        "fileChecksum": "7414021fdfcbd5c95fd5787d3a3607cfe5be99c6",
+        "lastUpdateTime": 1585570736824,
+        "createTime": 1578503968369
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338748888
+    },
+    {
+      "id": 4417682,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_policychange_api",
+        "fileName": "exp_digital_policychange_api-1.0.1-3728.zip",
+        "fileChecksum": "6edb33e6aa98f13ae2bf5761adfda0fe5ea1e07b",
+        "lastUpdateTime": 1581060399235,
+        "createTime": 1578503977456
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338726522
+    },
+    {
+      "id": 4417684,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_digital_vrnlookup_api",
+        "fileName": "exp_digital_vrnlookup_api-1.0.1-3687.zip",
+        "fileChecksum": "846eba21af68f438a840f8e1db545ab183106dfb",
+        "lastUpdateTime": 1580469079924,
+        "createTime": 1578503990007
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338665680
+    },
+    {
+      "id": 4417685,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_floow_policy_statusupdate_api",
+        "fileName": "exp_floow_policy_statusupdate_api-1.0.1-3631.zip",
+        "fileChecksum": "c94d9b711c2f5cb06166c99be073f350cff33cc7",
+        "lastUpdateTime": 1580466280990,
+        "createTime": 1578504001635
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338733341
+    },
+    {
+      "id": 4417686,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_gocompare_policy_motorquote_api",
+        "fileName": "exp_gocompare_policy_motorquote_api-1.0.1-3725.zip",
+        "fileChecksum": "03afda0d80cbdf9eef920de5b2b9667695d6d61e",
+        "lastUpdateTime": 1581003601625,
+        "createTime": 1578504013317
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338825669
+    },
+    {
+      "id": 4417687,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_gw_claims_policyretrieve_api",
+        "fileName": "exp_gw_claims_policyretrieve_api-1.0.1-3685.zip",
+        "fileChecksum": "05cee9233b0ce05ad52a5bc40f16a6b72e157437",
+        "lastUpdateTime": 1580469050721,
+        "createTime": 1578504022909
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338798645
+    },
+    {
+      "id": 4417689,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_gw_policy_claimpolicysearch_api",
+        "fileName": "exp_gw_policy_claimpolicysearch_api-1.0.1-3409.zip",
+        "fileChecksum": "5d60b1c7fc4fe98f910a24395aa607e7fb3552b8",
+        "lastUpdateTime": 1578504037934,
+        "createTime": 1578504037555
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338649589
+    },
+    {
+      "id": 4417690,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_msm_policy_motorquote_api",
+        "fileName": "exp_msm_policy_motorquote_api-1.0.1-3740.zip",
+        "fileChecksum": "421d62842013eb75adaa3e0e47d915cfa70302de",
+        "lastUpdateTime": 1581484269084,
+        "createTime": 1578504051925
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338731013
+    },
+    {
+      "id": 4417692,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_policy_fraudcheck_api",
+        "fileName": "exp_policy_fraudcheck_api-1.0.1-3674.zip",
+        "fileChecksum": "bf17482f8d96cc6179302e5972bbe92a5943d02d",
+        "lastUpdateTime": 1580622928691,
+        "createTime": 1578504060535
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338823885
+    },
+    {
+      "id": 4417693,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_digital_policy_quote_api",
+        "fileName": "prc_digital_policy_quote_api-1.0.1-3752.zip",
+        "fileChecksum": "86a3415bd79104d92af4c5d8d2e4c731acec0ac2",
+        "lastUpdateTime": 1582694001693,
+        "createTime": 1578504072009
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338696022
+    },
+    {
+      "id": 4417694,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_digital_policy_retrievequote_api",
+        "fileName": "prc_digital_policy_retrievequote_api-1.0.1-3713.zip",
+        "fileChecksum": "6ae982a2d5f2e4d70391c0a3e3b2a6972ab4d8c5",
+        "lastUpdateTime": 1580826912626,
+        "createTime": 1578504083435
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338756898
+    },
+    {
+      "id": 4417695,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_policy_getEnrichedRatingAndUWData_api",
+        "fileName": "prc_policy_getEnrichedRatingAndUWData_api-1.0.1-3824.zip",
+        "fileChecksum": "974bf144bcf5d423f2e8bdffb35735c7f9a15c09",
+        "lastUpdateTime": 1585570785470,
+        "createTime": 1578504097331
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338672451
+    },
+    {
+      "id": 4417697,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_policy_getPCWMotorQuotePrice_api",
+        "fileName": "prc_policy_getPCWMotorQuotePrice_api-1.0.1-3828.zip",
+        "fileChecksum": "d521f537c3e71b24b592115dac246d0b0f33fc41",
+        "lastUpdateTime": 1585668043686,
+        "createTime": 1578504109445
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338709349
+    },
+    {
+      "id": 4417699,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "prc_smartcomms_documents_api",
+        "fileName": "prc_smartcomms_documents_api-1.0.1-3643.zip",
+        "fileChecksum": "2970317e9cf4d853e04951a626fa3bd0ebc31cf2",
+        "lastUpdateTime": 1580622859125,
+        "createTime": 1578504125443
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338640230
+    },
+    {
+      "id": 4417700,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_billing_liabilitysuspension_api",
+        "fileName": "sys_billing_liabilitysuspension_api-1.0.0-3630.zip",
+        "fileChecksum": "edfda7bc707d091bf7cfeb9970a5b44e8fc132d9",
+        "lastUpdateTime": 1580622877299,
+        "createTime": 1578504135140
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338785126
+    },
+    {
+      "id": 4417702,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_billing_policy_api",
+        "fileName": "sys_billing_policy_api-1.0.1-3632.zip",
+        "fileChecksum": "c0dfb52fb97434ee86c02363b07c22882fdc85bc",
+        "lastUpdateTime": 1580622893907,
+        "createTime": 1578504143583
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338738288
+    },
+    {
+      "id": 4417703,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_billing_policycancellation_api",
+        "fileName": "sys_billing_policycancellation_api-1.0.1-3634.zip",
+        "fileChecksum": "22267a7f99d91ed9357b0f59e9e0367312badaa0",
+        "lastUpdateTime": 1580622910807,
+        "createTime": 1578504152086
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338712573
+    },
+    {
+      "id": 4417705,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_carweb_api",
+        "fileName": "sys_carweb_api-1.0.1-3753.zip",
+        "fileChecksum": "2b053656d7e5cfcee7a1d7cc9bf1347ec689c4f6",
+        "lastUpdateTime": 1585935401951,
+        "createTime": 1578504163871
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338652167
+    },
+    {
+      "id": 4417706,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_activitysearch_api",
+        "fileName": "sys_claims_activitysearch_api-1.0.1-3754.zip",
+        "fileChecksum": "8cea0f28086c3b7ee82f1b3c9497268272f110b2",
+        "lastUpdateTime": 1582694214812,
+        "createTime": 1578504179932
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338663788
+    },
+    {
+      "id": 4417708,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_claimsearch_api",
+        "fileName": "sys_claims_claimsearch_api-1.0.1-3755.zip",
+        "fileChecksum": "ba122cabf24ffaf4062b4ba364c66a9213f48ad9",
+        "lastUpdateTime": 1582694208470,
+        "createTime": 1578504188678
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338754964
+    },
+    {
+      "id": 4417709,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_cm_api",
+        "fileName": "sys_claims_cm_api-1.0.1-3756.zip",
+        "fileChecksum": "727e39e7c2ad563cfd4629299cb0b264b5df6e2c",
+        "lastUpdateTime": 1582694238272,
+        "createTime": 1578504197444
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338827152
+    },
+    {
+      "id": 4417710,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_detica_api",
+        "fileName": "sys_claims_detica_api-1.0.1-3757.zip",
+        "fileChecksum": "0607f530f5a58e1de5a623d3908ffc4f6867e99e",
+        "lastUpdateTime": 1582694288047,
+        "createTime": 1578504210135
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338816250
+    },
+    {
+      "id": 4417711,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_dvla_api",
+        "fileName": "sys_claims_dvla_api-1.0.1-3758.zip",
+        "fileChecksum": "e80c44ef9f03385b9901ae9db48941e873a35504",
+        "lastUpdateTime": 1582694325306,
+        "createTime": 1578504222160
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338669911
+    },
+    {
+      "id": 4417712,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_moj_api",
+        "fileName": "sys_claims_moj_api-1.0.1-3825.zip",
+        "fileChecksum": "ee98118eb6486e1dd9c65e04cfd8068f645b7dec",
+        "lastUpdateTime": 1585570772430,
+        "createTime": 1578504232364
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338739638
+    },
+    {
+      "id": 4417713,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_oanda_api",
+        "fileName": "sys_claims_oanda_api-1.0.1-3627.zip",
+        "fileChecksum": "603c8150d26250155bee08c362db17b046ee1b6d",
+        "lastUpdateTime": 1580466161075,
+        "createTime": 1578504247873
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338785992
+    },
+    {
+      "id": 4417714,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_paymentsearch_api",
+        "fileName": "sys_claims_paymentsearch_api-1.0.1-3760.zip",
+        "fileChecksum": "ef4b39670677e3d80d47feabf04e74377fd750e2",
+        "lastUpdateTime": 1582694408921,
+        "createTime": 1578504257257
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338645688
+    },
+    {
+      "id": 4417715,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_recoverysearch_api",
+        "fileName": "sys_claims_recoverysearch_api-1.0.1-3761.zip",
+        "fileChecksum": "e8fb31bb05cc8a4fd7a5d5b0f338b288dd34d853",
+        "lastUpdateTime": 1582694419845,
+        "createTime": 1578504266622
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338834167
+    },
+    {
+      "id": 4417716,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_vehiclelookup_api",
+        "fileName": "sys_claims_vehiclelookup_api-1.0.1-3642.zip",
+        "fileChecksum": "b52ee3c32981c5d1beb117578ced7fcf82883134",
+        "lastUpdateTime": 1580466481009,
+        "createTime": 1578504279322
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338694028
+    },
+    {
+      "id": 4417717,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_dataplatform_Barring_api",
+        "fileName": "sys_dataplatform_Barring_api-1.0.1-3652.zip",
+        "fileChecksum": "2a809ad059746fa960ca3b904b25791577db1df0",
+        "lastUpdateTime": 1580467223983,
+        "createTime": 1578504294305
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338654608
+    },
+    {
+      "id": 4417718,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_dataplatform_crud_proxy_api",
+        "fileName": "sys_dataplatform_crud_proxy_api-1.0.1-3700.zip",
+        "fileChecksum": "ef8054cae0dd936f51c04e97c78a63ec200586c1",
+        "lastUpdateTime": 1580471058144,
+        "createTime": 1578504302784
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338647749
+    },
+    {
+      "id": 4417719,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_dataplatform_quote_manipulation_api",
+        "fileName": "sys_dataplatform_quote_manipulation_api-1.0.0-3672.zip",
+        "fileChecksum": "6eb4bd1f8d7bcc150efb389d8c9e8810bd5fe2cc",
+        "lastUpdateTime": 1580467861329,
+        "createTime": 1578504318449
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338819046
+    },
+    {
+      "id": 4417724,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_digital_policy_account_api",
+        "fileName": "sys_digital_policy_account_api-1.0.1-3814.zip",
+        "fileChecksum": "b8fb01903725deb1d0787b01d84133219f66016f",
+        "lastUpdateTime": 1585142518776,
+        "createTime": 1578504337038
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338786815
+    },
+    {
+      "id": 4417725,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_digital_vehiclelookup_api",
+        "fileName": "sys_digital_vehiclelookup_api-1.0.1-3798.zip",
+        "fileChecksum": "058753e49d3d9873b42466daa8509614b76ec8d3",
+        "lastUpdateTime": 1584339849857,
+        "createTime": 1578504352569
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338847162
+    },
+    {
+      "id": 4417729,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_email_documents_distribution_api",
+        "fileName": "sys_email_documents_distribution_api-1.0.1-3664.zip",
+        "fileChecksum": "e7a16b41e4710640cc0e20d9ef30188c52885bde",
+        "lastUpdateTime": 1580467731010,
+        "createTime": 1578504367989
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338678583
+    },
+    {
+      "id": 4417735,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_experian_bankwizard_account",
+        "fileName": "sys_experian_bankwizard_account-1.0.1-3650.zip",
+        "fileChecksum": "c079e7f1060b1baba2cdf0a5e89a2f121d5b6bb6",
+        "lastUpdateTime": 1580706916723,
+        "createTime": 1578504392363
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338722091
+    },
+    {
+      "id": 4417736,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_experian_crosscore_fraudCheck_api",
+        "fileName": "sys_experian_crosscore_fraudCheck_api-1.0.1-3762.zip",
+        "fileChecksum": "ee7785118b8fb8a027bd3df539cd765ca64c4577",
+        "lastUpdateTime": 1582694598921,
+        "createTime": 1578504404689
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338685078
+    },
+    {
+      "id": 4417739,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_experian_icache_creditscore_api",
+        "fileName": "sys_experian_icache_creditscore_api-1.0.1-3653.zip",
+        "fileChecksum": "435b187ea8ef359d4916cdac66e860134c05139e",
+        "lastUpdateTime": 1580467262550,
+        "createTime": 1578504418322
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338793791
+    },
+    {
+      "id": 4417741,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_fax_documents_distribution_api",
+        "fileName": "sys_fax_documents_distribution_api-1.0.1-3663.zip",
+        "fileChecksum": "f66aa8ee8bcb35c80454c64297c82a6094c57c7d",
+        "lastUpdateTime": 1580467721797,
+        "createTime": 1578504427474
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338657732
+    },
+    {
+      "id": 4417742,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_guidewire_documents_docarchive_api",
+        "fileName": "sys_guidewire_documents_docarchive_api-1.0.1-3662.zip",
+        "fileChecksum": "6627a5acdf66edac12a2d1c9e8d89184c8c127b7",
+        "lastUpdateTime": 1580467706701,
+        "createTime": 1578504436673
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338774656
+    },
+    {
+      "id": 4417743,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_gw_billing_previoustermdata_api",
+        "fileName": "sys_gw_billing_previoustermdata_api-1.0.0-3703.zip",
+        "fileChecksum": "56029da52ab929a2f36975af9d0e45d424eaa8ba",
+        "lastUpdateTime": 1580471061772,
+        "createTime": 1578504447740
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338667812
+    },
+    {
+      "id": 4417744,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_gw_policy_policyRenewals_api",
+        "fileName": "sys_gw_policy_policyRenewals_api-1.0.1-3618.zip",
+        "fileChecksum": "a31577a11d2336b562f17454a8a8c5cc5d0c84d0",
+        "lastUpdateTime": 1580392461912,
+        "createTime": 1578504456444
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338748112
+    },
+    {
+      "id": 4417745,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_gw_policy_quotevalidation_api",
+        "fileName": "sys_gw_policy_quotevalidation_api-1.0.1-3704.zip",
+        "fileChecksum": "3336b7762ee3afd719fd7ba68ff57af50b32e9e1",
+        "lastUpdateTime": 1580471024613,
+        "createTime": 1578504465257
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338851909
+    },
+    {
+      "id": 4417748,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_gw_worldpay_notifications_api",
+        "fileName": "sys_gw_worldpay_notifications_api-1.0.1-3791.zip",
+        "fileChecksum": "d452365f1c4c8e95442e2cb7f5cded8eef207310",
+        "lastUpdateTime": 1584087147131,
+        "createTime": 1578504482235
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338813334
+    },
+    {
+      "id": 4417750,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_gw_worldpay_payment_api",
+        "fileName": "sys_gw_worldpay_payment_api-1.0.1-3827.zip",
+        "fileChecksum": "aff676779fafd526dd2f975809e469b367ca3b5d",
+        "lastUpdateTime": 1585570898681,
+        "createTime": 1578504492907
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338806006
+    },
+    {
+      "id": 4417751,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_hopewiser_api",
+        "fileName": "sys_hopewiser_api-1.0.1-3795.zip",
+        "fileChecksum": "9e7b7c5f7d676e7d7dee6b4decec46f00a0d1b1a",
+        "lastUpdateTime": 1584099741994,
+        "createTime": 1578504504125
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338661443
+    },
+    {
+      "id": 4417752,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_largepricingtable_ratingfactor_api",
+        "fileName": "sys_largepricingtable_ratingfactor_api-1.0.1-3644.zip",
+        "fileChecksum": "15519f42a7ad859402b3c2a81f19995fbfbbdcb9",
+        "lastUpdateTime": 1580466577805,
+        "createTime": 1578504515391
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338831953
+    },
+    {
+      "id": 4417754,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_lexisnexis_ncd_api",
+        "fileName": "sys_lexisnexis_ncd_api-1.0.1-3763.zip",
+        "fileChecksum": "28b40b36591bc612b2228f2c82697d22efcc86cb",
+        "lastUpdateTime": 1582694659729,
+        "createTime": 1578504526914
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338800403
+    },
+    {
+      "id": 4417755,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_opentext_documents_docarchive_api",
+        "fileName": "sys_opentext_documents_docarchive_api-1.0.1-3739.zip",
+        "fileChecksum": "e7ed241e3c7d0e517577bb339d32a105e1af46a9",
+        "lastUpdateTime": 1581397824848,
+        "createTime": 1578504542565
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338808206
+    },
+    {
+      "id": 4417757,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_opentext_documents_docarchiveinb_api",
+        "fileName": "sys_opentext_documents_docarchiveinb_api-1.0.1-3790.zip",
+        "fileChecksum": "6da399d70703b3ecbb12bacc93840c5627486bda",
+        "lastUpdateTime": 1584086603142,
+        "createTime": 1578504552847
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338843717
+    },
+    {
+      "id": 4417758,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_opentext_documents_resend_api",
+        "fileName": "sys_opentext_documents_resend_api-1.0.1-3764.zip",
+        "fileChecksum": "2e3d996dd4ee25b8a203efdbecde946639f01f57",
+        "lastUpdateTime": 1582694700787,
+        "createTime": 1578504569359
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338734650
+    },
+    {
+      "id": 4417759,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_billing_api",
+        "fileName": "sys_policy_billing_api-1.0.1-3797.zip",
+        "fileChecksum": "808ba82e4b13a664f37ad4ed66c1163734b3049d",
+        "lastUpdateTime": 1584339027388,
+        "createTime": 1578504578061
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338714706
+    },
+    {
+      "id": 4417760,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_billingsummary_api",
+        "fileName": "sys_policy_billingsummary_api-1.0.1-3771.zip",
+        "fileChecksum": "5ca4f17ffe8597a418ce5f835ba969d4408e263d",
+        "lastUpdateTime": 1583225220020,
+        "createTime": 1578504586579
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338788910
+    },
+    {
+      "id": 4417762,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_claims_api",
+        "fileName": "sys_policy_claims_api-1.0.1-3705.zip",
+        "fileChecksum": "c8cc03d49d221673a76646ae59dda5f47b436735",
+        "lastUpdateTime": 1580471072944,
+        "createTime": 1578504606687
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338689908
+    },
+    {
+      "id": 4417763,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_sendtotallossindicator_api",
+        "fileName": "sys_policy_sendtotallossindicator_api-1.0.0-3580.zip",
+        "fileChecksum": "cd177f6f6bd3f03f1018cb64dd493d2d9d752506",
+        "lastUpdateTime": 1579497244346,
+        "createTime": 1578504616947
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338729324
+    },
+    {
+      "id": 4417764,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_telematics_datapush_api",
+        "fileName": "sys_policy_telematics_datapush_api-1.0.1-3732.zip",
+        "fileChecksum": "1ea2dfa72828bd622f2fa624e64e683de86b5cac",
+        "lastUpdateTime": 1581332505069,
+        "createTime": 1578504633618
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338829763
+    },
+    {
+      "id": 4417766,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_telematics_policyanddrivers_api",
+        "fileName": "sys_policy_telematics_policyanddrivers_api-1.0.1-3765.zip",
+        "fileChecksum": "617474e0c9753ba05d3f8923a57e7216d77f3536",
+        "lastUpdateTime": 1582694815939,
+        "createTime": 1578504642756
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338828833
+    },
+    {
+      "id": 4417767,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_telematics_scores_api",
+        "fileName": "sys_policy_telematics_scores_api-1.0.1-3813.zip",
+        "fileChecksum": "516f1926c8109ad0aa272f3a7034813519a08d42",
+        "lastUpdateTime": 1585038903290,
+        "createTime": 1578504651820
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338762049
+    },
+    {
+      "id": 4417768,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policy_telematics_sendorder_api",
+        "fileName": "sys_policy_telematics_sendorder_api-1.0.1-3629.zip",
+        "fileChecksum": "10871dbcb67a3262f3f94e8104d8430f06f1fb37",
+        "lastUpdateTime": 1580466255120,
+        "createTime": 1578504661087
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338634675
+    },
+    {
+      "id": 4417769,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policycenter_policy_finalpricing_api",
+        "fileName": "sys_policycenter_policy_finalpricing_api-1.0.1-3669.zip",
+        "fileChecksum": "3afbb0dbde2a4ae2fc93c86eeeda29f678706b39",
+        "lastUpdateTime": 1580467783985,
+        "createTime": 1578504673366
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338637548
+    },
+    {
+      "id": 4417771,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policycenter_policy_getcoverages_api",
+        "fileName": "sys_policycenter_policy_getcoverages_api-1.0.1-3693.zip",
+        "fileChecksum": "0af96b9e01ec866ce34265eaa8a66f39739d9a2b",
+        "lastUpdateTime": 1580469401458,
+        "createTime": 1578504682040
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338688582
+    },
+    {
+      "id": 4417772,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_policycenter_policyrenewal_api",
+        "fileName": "sys_policycenter_policyrenewal_api-1.0.1-3706.zip",
+        "fileChecksum": "6375897e9a4369902090b1dc4c3a0af24de25106",
+        "lastUpdateTime": 1580471182463,
+        "createTime": 1578504691167
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338842373
+    },
+    {
+      "id": 4417773,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_quotestore_policy_insertpcwquote_proxy_api",
+        "fileName": "sys_quotestore_policy_insertpcwquote_proxy_api-1.0.1-3694.zip",
+        "fileChecksum": "c009cdd8fa2728baef621ed07591cb1273210b5c",
+        "lastUpdateTime": 1580469475387,
+        "createTime": 1578504699999
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338822935
+    },
+    {
+      "id": 4417774,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_quotestore_policy_retrievepcwquote_api",
+        "fileName": "sys_quotestore_policy_retrievepcwquote_api-1.0.1-3682.zip",
+        "fileChecksum": "fc3f8c241a27dbb462253f6ba25d703538cdc7d8",
+        "lastUpdateTime": 1580468890722,
+        "createTime": 1578504709253
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338676792
+    },
+    {
+      "id": 4417775,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_quotestore_policy_searchpcwquote_api",
+        "fileName": "sys_quotestore_policy_searchpcwquote_api-1.0.1-3673.zip",
+        "fileChecksum": "8275b38019a5cc3bb432ec9f1f3a08c522f8f3a3",
+        "lastUpdateTime": 1580467948161,
+        "createTime": 1578504721035
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338765672
+    },
+    {
+      "id": 4417776,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_quotestore_policy_updatepcwquotestatus_api",
+        "fileName": "sys_quotestore_policy_updatepcwquotestatus_api-1.0.1-3675.zip",
+        "fileChecksum": "7a577a19c912eab3ce24b04e77da23feffc6e2b5",
+        "lastUpdateTime": 1580467959810,
+        "createTime": 1578504733515
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338801385
+    },
+    {
+      "id": 4417778,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_radar_policy_getLinkedrescuePrice_api",
+        "fileName": "sys_radar_policy_getLinkedrescuePrice_api-1.0.1-3655.zip",
+        "fileChecksum": "e22bfa1acd5eccc9cdf6284d28e7290d53bf54a8",
+        "lastUpdateTime": 1580467503353,
+        "createTime": 1578504745487
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338837046
+    },
+    {
+      "id": 4417780,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_radar_policy_getMotorPrice_api",
+        "fileName": "sys_radar_policy_getMotorPrice_api-1.0.1-3654.zip",
+        "fileChecksum": "3c81febe37c354e738cfe49efb80b1d6630c27cd",
+        "lastUpdateTime": 1580467498741,
+        "createTime": 1578504758631
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338777529
+    },
+    {
+      "id": 4417781,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_radarOnDemand_policy_getLinkedrescuePrice_api",
+        "fileName": "sys_radarOnDemand_policy_getLinkedrescuePrice_api-1.0.1-3651.zip",
+        "fileChecksum": "6b265899d9a8373122ff82ee4a00fc8ff6826559",
+        "lastUpdateTime": 1580467163081,
+        "createTime": 1578504770645
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338781439
+    },
+    {
+      "id": 4417782,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_radarOnDemand_policy_getMotorPrice_api",
+        "fileName": "sys_radarOnDemand_policy_getMotorPrice_api-1.0.1-3649.zip",
+        "fileChecksum": "44fd18a16d539f014b45773e74c88f8debd7d065",
+        "lastUpdateTime": 1580467126599,
+        "createTime": 1578504782717
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338698231
+    },
+    {
+      "id": 4417784,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_smartcomms_documents_docprod_api",
+        "fileName": "sys_smartcomms_documents_docprod_api-1.0.1-3766.zip",
+        "fileChecksum": "3f7751b791da6b253691c4c51ebed1e3f73ae6e3",
+        "lastUpdateTime": 1582694874876,
+        "createTime": 1578504803112
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338790072
+    },
+    {
+      "id": 4417785,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_smartcomms_documents_missingfields_api",
+        "fileName": "sys_smartcomms_documents_missingfields_api-1.0.1-3767.zip",
+        "fileChecksum": "2dc579ba3e81a11828a0093b209131dd6fc1e368",
+        "lastUpdateTime": 1582694855011,
+        "createTime": 1578504813267
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338835892
+    },
+    {
+      "id": 4417787,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_sms_documents_distribution_api",
+        "fileName": "sys_sms_documents_distribution_api-1.0.1-3707.zip",
+        "fileChecksum": "c662f19a5c14c3a4386be1c8fadf84cb42d918b2",
+        "lastUpdateTime": 1580472117109,
+        "createTime": 1578504828953
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338700851
+    },
+    {
+      "id": 4417789,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_sms_documentsinb_distribution_api",
+        "fileName": "sys_sms_documentsinb_distribution_api-1.0.1-3774.zip",
+        "fileChecksum": "ebe12a6346c6ff83fc1b6325dd0c37436b7dad56",
+        "lastUpdateTime": 1583333435639,
+        "createTime": 1578504844262
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338706044
+    },
+    {
+      "id": 4417791,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_telematics_app_scores_api",
+        "fileName": "sys_telematics_app_scores_api-1.0.1-3512.zip",
+        "fileChecksum": "fc52c75fdcba66658023260424d1190ee3f3382b",
+        "lastUpdateTime": 1578504853444,
+        "createTime": 1578504853316
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338803602
+    },
+    {
+      "id": 4457176,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "exp_moj_processnf_batch_executor",
+        "fileName": "exp_moj_processnf_batch_executor-1.0.0-3574.zip",
+        "fileChecksum": "447dc3e893e3abd565d0bf277fd3a799a4eabea8",
+        "lastUpdateTime": 1579172393940,
+        "createTime": 1579172393719
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338795544
+    },
+    {
+      "id": 4619804,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sandboxservice",
+        "fileName": "sandboxservice-1.0.0-3745.zip",
+        "fileChecksum": "a70d48af85501d144b6b982ab40fc30fa5fffb70",
+        "lastUpdateTime": 1582045568898,
+        "createTime": 1582005557934
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338763777
+    },
+    {
+      "id": 4659530,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_routing_proxy_api",
+        "fileName": "sys_routing_proxy_api-1.0.0-3779.zip",
+        "fileChecksum": "f11318ba1e9cc88ec24ab56e0a26421db6cb04c7",
+        "lastUpdateTime": 1583773934750,
+        "createTime": 1582635308109
+      },
+      "lastReportedStatus": "DEPLOYMENT_FAILED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "DEPLOYMENT_FAILED",
+            "message": "FileNotFoundException: /apps/mulesoft-esb/conf/dlg/properties/sys_routing_proxy_api_r1cdev.properties (No such file or directory)"
+          }
+        ]
+      },
+      "uptime": -1
+    },
+    {
+      "id": 4720966,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_email_documents_notifybounce_api",
+        "fileName": "sys_email_documents_notifybounce_api-1.0.1-3821.zip",
+        "fileChecksum": "ef8896f1721e799f31b56cdf2e87206a839bae0c",
+        "lastUpdateTime": 1585226776668,
+        "createTime": 1583482712775
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338840047
+    },
+    {
+      "id": 4795697,
+      "target": {
+        "id": 2278561,
+        "type": "SERVER",
+        "name": "r1cdev_awsbdl1cdmba01",
+        "status": "RUNNING"
+      },
+      "artifact": {
+        "name": "sys_claims_deop_api",
+        "fileName": "sys_claims_deop_api-1.0.1-3805.zip",
+        "fileChecksum": "0a8866bcbe2a3345f0cc89cba593c946d8000dba",
+        "lastUpdateTime": 1584715521911,
+        "createTime": 1584711922452
+      },
+      "lastReportedStatus": "STARTED",
+      "desiredStatus": "STARTED",
+      "details": {
+        "serverArtifacts": [
+          {
+            "target": {
+              "id": 2278561,
+              "type": "SERVER",
+              "name": "r1cdev_awsbdl1cdmba01",
+              "status": "RUNNING"
+            },
+            "lastReportedStatus": "STARTED",
+            "message": ""
+          }
+        ]
+      },
+      "uptime": 338783432
+    }
+  ],
+  "total": 89
+}
