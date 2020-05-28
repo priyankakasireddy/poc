@@ -1,0 +1,16 @@
+{
+"username":"kvbq",
+"password":"Priya@0403",
+"svnUsername":"kvbq",
+"svnPassword":"Orange12",
+"envName":"R1C3SIT",
+"svnBranch": "r1c3_esb"
+}
+
+
+{
+"promoteToEnv":"R1C2E2ETT6",
+"promoteFromEnv":"R1C2SIT",
+"username":"kvbq",
+"password":"Priya@0403"
+}
