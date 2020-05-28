@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ajax="http://www.mulesoft.org/schema/mule/ajax" xmlns:objectstore="http://www.mulesoft.org/schema/mule/objectstore"
+	xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/objectstore http://www.mulesoft.org/schema/mule/objectstore/current/mule-objectstore.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ajax http://www.mulesoft.org/schema/mule/ajax/current/mule-ajax.xsd">
+	
+	
+	<http:request-config name="promoteAPI" protocol="HTTPS" host="anypoint.mulesoft.com" port="443" doc:name="HTTP Request Configuration" basePath="#[flowVars.promoteAPI]" />
+	
+	
+	
+	<http:request-config name="RetreiveApiIds" protocol="HTTPS" basePath="#[flowVars.RetriveAPIDetailsPath]" doc:name="HTTP Request Configuration" host="anypoint.mulesoft.com" port="443"/>
+    
+
+    <flow name="PromotingOfApis">
+        <http:listener config-ref="Domain_HTTP_Listener_Configuration" path="/promoteApis" doc:name="HTTP"/>
+        <logger level="INFO" doc:name="Logger" message="Flow start promotion of API's======= #[payload]"/>
+        <json:json-to-object-transformer doc:name="JSON to Object" returnClass="java.util.HashMap"/>
+        <flow-ref name="envDetailSub_Flow" doc:name="envDetailsSubFlow"/>
+        <dw:transform-message doc:name="Transform Message">
+			<dw:set-variable variableName="promoteAPI"><![CDATA[%dw 1.0
+%output application/java
+---
+"/apimanager/api/v1/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments/" ++ flowVars.promoteToEnv]]></dw:set-variable>
+			<dw:set-variable variableName="RetriveAPIDetailsPath"><![CDATA[%dw 1.0
+%output application/java
+---
+"/apimanager/api/v1/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments/" ++ flowVars.promoteFromEnv
+]]></dw:set-variable>
+
+		</dw:transform-message>
+		<http:request config-ref="RetreiveApiIds" path="/apis" method="GET" doc:name="RetreiveApiIDs">
+			<http:request-builder>
+				<http:header headerName="Content-Type" value="application/json"/>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="sample_data\json_1.json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	"apiList": (payload.assets map ((asset, indexOfAsset)-> {
+	(asset.apis map ((apis, indexOfApis)-> {
+			"apiId": apis.id
+			
+		}))
+		
+	}))
+}]]></dw:set-payload>
+			<dw:set-variable variableName="combinedData"><![CDATA[%dw 1.0
+%output application/java
+---
+[]]]></dw:set-variable>
+		</dw:transform-message>
+		<foreach collection="#[payload.apiList]" doc:name="For Each">
+			<logger message="#[payload]" level="INFO" doc:name="Logger"/>
+			<dw:transform-message doc:name="Transform Message">
+				<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+  "instanceLabel": null,
+  "promote": {
+    "originApiId": payload.apiId,
+    "policies": {
+      "allEntities": true
+    },
+    "tiers": {
+      "allEntities": true
+    },
+    "alerts": {
+      "allEntities": true
+    }
+  }
+}]]></dw:set-payload>
+			</dw:transform-message>
+			<http:request config-ref="promoteAPI" path="/apis" method="POST" doc:name="PromotingToOtherEnv">
+				<http:request-builder>
+					<http:header headerName="Content-Type" value="application/json"/>
+					<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+				</http:request-builder>
+			</http:request>
+			<dw:transform-message doc:name="Transform Message">
+				<dw:input-payload doc:sample="sample_data\json_2.json"/>
+				<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	assetId: payload.assetId,
+	autodiscoveryVersion: payload.autodiscoveryInstanceName
+}]]></dw:set-payload>
+			</dw:transform-message>
+			<expression-component doc:name="Expression"><![CDATA[flowVars.combinedData.add(payload)]]></expression-component>
+
+		</foreach>
+		<logger message="After For each #[payload]" level="INFO" doc:name="Logger"/>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/csv header=true
+---
+flowVars.combinedData map ((data, indexofdata) -> {
+	APIName:data.assetId,
+	AutoDiscoveryVersion:data.autodiscoveryVersion
+})
+]]></dw:set-payload>
+		</dw:transform-message>
+
+        <logger level="INFO" doc:name="Logger" message="Flow end promoted API LIST==========#[payload]"/>
+    </flow>
+
+    <sub-flow name="envDetailSub_Flow">
+        <logger message="envDetails subflow Started" level="INFO" doc:name="Logger"/>
+    <message-properties-transformer scope="invocation" doc:name="Message Properties">
+            <add-message-property key="promoteToEnv" value="#[payload.promoteToEnv]"/>
+
+            <add-message-property key="username" value="#[payload.username]"/>
+            <add-message-property key="password" value="#[payload.password]"/>
+			<add-message-property key="promoteFromEnv" value="#[payload.promoteFromEnv]"/>
+        </message-properties-transformer>
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	username: flowVars.username,
+	password: flowVars.password
+}]]></dw:set-payload>
+        </dw:transform-message>
+		<http:request config-ref="HTTP_Request_Configuration" path="/accounts/login" method="POST" doc:name="accesstoken"/>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:set-variable variableName="access_token"><![CDATA[%dw 1.0
+%output application/java
+%var accesstoken= payload.access_token
+---
+"Bearer " ++ accesstoken]]></dw:set-variable>
+		</dw:transform-message>
+		<http:request config-ref="HTTP_Request_Configuration" path="/accounts/api/organizations/80b9d969-5f1f-4d34-9e3d-9318f1ad915a/environments" method="GET" doc:name="ENV details">
+			<http:request-builder>
+				<http:header headerName="Authorization" value="#[flowVars.access_token]"/>
+				<http:header headerName="Content-Type" value="application/json"/>
+			</http:request-builder>
+		</http:request>
+		<dw:transform-message doc:name="Transform Message">
+			<dw:input-payload doc:sample="sample_data\json_3.json"/>
+			<dw:set-variable variableName="promoteToEnv"><![CDATA[%dw 1.0
+%output application/java
+%var envid= flatten (payload.data map ((data, indexofdata) -> {
+	
+	(id: data.id) when data.name == flowVars.promoteToEnv
+		
+	} filter data!={})) reduce $$
+	
+---
+envid.id
+	]]></dw:set-variable>
+
+			<dw:set-variable variableName="organizationId"><![CDATA[%dw 1.0
+%output application/java
+%var orgid=flatten (payload.data map ((data, indexofdata) -> {
+	
+	(orgid: data.organizationId) when data.name == flowVars.promoteToEnv
+		
+	} filter data!={})) reduce $$
+---
+orgid.orgid
+	]]></dw:set-variable>
+			<dw:set-variable variableName="promoteFromEnv"><![CDATA[%dw 1.0
+%output application/java
+%var envid= flatten (payload.data map ((data, indexofdata) -> {
+	
+	(id: data.id) when data.name == flowVars.promoteFromEnv
+		
+	} filter data!={})) reduce $$
+	
+---
+envid.id
+	]]></dw:set-variable>
+		</dw:transform-message>
+		<logger level="INFO" doc:name="Logger" message="End of env details flow ================ #[flowVars.envid]"/>
+		
+    </sub-flow>
+
+
+</mule>
